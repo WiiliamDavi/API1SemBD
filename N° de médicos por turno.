@@ -124,3 +124,162 @@ while maximo_med < (turno_noite_CD + turno_noite_Ped + turno_noite_Cir):
     button = input("Digite 's' para confirmar ou 'n' para corrigir: ")
 
 print("Dados do turno da noite confirmados.")
+
+
+
+
+
+AGORA EM VISUALG 
+NÃO está completo, precisa da mensagem de erro caso o número de médicos passe do limite 
+
+
+
+
+Algoritmo "Escala_Medicos"
+
+Var
+   turno_manha_CD, turno_manha_Ped, turno_manha_Cir : inteiro
+   turno_tarde_CD, turno_tarde_Ped, turno_tarde_Cir : inteiro
+   turno_noite_CD, turno_noite_Ped, turno_noite_Cir : inteiro
+   button : caractere
+
+Inicio
+
+   // TURNO DA MANHÃ
+   
+
+   escreval("Digite o número de Clínicos Gerais do turno da manhã: ")
+   leia(turno_manha_CD)
+
+   escreval("Digite o número de Pediatras do turno da manhã: ")
+   leia(turno_manha_Ped)
+
+   escreval("Digite o número de Cirurgiões do turno da manhã: ")
+   leia(turno_manha_Cir)
+
+   escreval()
+   escreval("Confirme os dados do turno da manhã:")
+   escreval("Clínicos Gerais: ", turno_manha_CD)
+   escreval("Pediatras: ", turno_manha_Ped)
+   escreval("Cirurgiões: ", turno_manha_Cir)
+
+   escreval("Digite 's' para confirmar ou 'n' para corrigir:")
+   leia(button)
+
+   enquanto button = "n" faca
+
+      escreval("Digite o número de Clínicos Gerais do turno da manhã: ")
+      leia(turno_manha_CD)
+
+      escreval("Digite o número de Pediatras do turno da manhã: ")
+      leia(turno_manha_Ped)
+
+      escreval("Digite o número de Cirurgiões do turno da manhã: ")
+      leia(turno_manha_Cir)
+
+      escreval()
+      escreval("Confirme os dados do turno da manhã:")
+      escreval("Clínicos Gerais: ", turno_manha_CD)
+      escreval("Pediatras: ", turno_manha_Ped)
+      escreval("Cirurgiões: ", turno_manha_Cir)
+
+      escreval("Digite 's' para confirmar ou 'n' para corrigir:")
+      leia(button)
+
+   fimenquanto
+
+   escreval("Dados da manhã confirmados.")
+
+
+   // TURNO DA TARDE
+
+   escreval()
+   escreval("Digite o número de Clínicos Gerais do turno da tarde: ")
+   leia(turno_tarde_CD)
+
+   escreval("Digite o número de Pediatras do turno da tarde: ")
+   leia(turno_tarde_Ped)
+
+   escreval("Digite o número de Cirurgiões do turno da tarde: ")
+   leia(turno_tarde_Cir)
+
+   escreval()
+   escreval("Confirme os dados do turno da tarde:")
+   escreval("Clínicos Gerais: ", turno_tarde_CD)
+   escreval("Pediatras: ", turno_tarde_Ped)
+   escreval("Cirurgiões: ", turno_tarde_Cir)
+
+   escreval("Digite 's' para confirmar ou 'n' para corrigir:")
+   leia(button)
+
+   enquanto button = "n" faca
+
+      escreval("Digite o número de Clínicos Gerais do turno da tarde: ")
+      leia(turno_tarde_CD)
+
+      escreval("Digite o número de Pediatras do turno da tarde: ")
+      leia(turno_tarde_Ped)
+
+      escreval("Digite o número de Cirurgiões do turno da tarde: ")
+      leia(turno_tarde_Cir)
+
+      escreval()
+      escreval("Confirme os dados do turno da tarde:")
+      escreval("Clínicos Gerais: ", turno_tarde_CD)
+      escreval("Pediatras: ", turno_tarde_Ped)
+      escreval("Cirurgiões: ", turno_tarde_Cir)
+
+      escreval("Digite 's' para confirmar ou 'n' para corrigir:")
+      leia(button)
+
+   fimenquanto
+
+   escreval("Dados da tarde confirmados.")
+
+   // TURNO DA NOITE
+
+   escreval()
+   escreval("Digite o número de Clínicos Gerais do turno da noite: ")
+   leia(turno_noite_CD)
+
+   escreval("Digite o número de Pediatras do turno da noite: ")
+   leia(turno_noite_Ped)
+
+   escreval("Digite o número de Cirurgiões do turno da noite: ")
+   leia(turno_noite_Cir)
+
+   escreval()
+   escreval("Confirme os dados do turno da noite:")
+   escreval("Clínicos Gerais: ", turno_noite_CD)
+   escreval("Pediatras: ", turno_noite_Ped)
+   escreval("Cirurgiões: ", turno_noite_Cir)
+
+   escreval("Digite 's' para confirmar ou 'n' para corrigir:")
+   leia(button)
+
+   enquanto button = "n" faca
+
+      escreval("Digite o número de Clínicos Gerais do turno da noite: ")
+      leia(turno_noite_CD)
+
+      escreval("Digite o número de Pediatras do turno da noite: ")
+      leia(turno_noite_Ped)
+
+      escreval("Digite o número de Cirurgiões do turno da noite: ")
+      leia(turno_noite_Cir)
+
+      escreval()
+      escreval("Confirme os dados do turno da noite:")
+      escreval("Clínicos Gerais: ", turno_noite_CD)
+      escreval("Pediatras: ", turno_noite_Ped)
+      escreval("Cirurgiões: ", turno_noite_Cir)
+
+      escreval("Digite 's' para confirmar ou 'n' para corrigir:")
+      leia(button)
+
+   fimenquanto
+
+   escreval("Dados da noite confirmados.")
+
+Fimalgoritmo
+
