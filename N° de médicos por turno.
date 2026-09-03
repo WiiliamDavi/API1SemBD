@@ -1,6 +1,6 @@
 
 # TURNO DA MANHÃ
-
+maximo_med= 150
 
 turno_manha_CD = int(input("Digite o número de Clínicos Gerais do turno da manhã: "))
 turno_manha_Ped = int(input("Digite o número de Pediatras do turno da manhã: "))
@@ -14,6 +14,20 @@ print("Cirurgiões:", turno_manha_Cir)
 button = input("Digite 's' para confirmar ou 'n' para corrigir: ")
 
 while button.lower() == 'n':
+    turno_manha_CD = int(input("Digite o número de Clínicos Gerais do turno da manhã: "))
+    turno_manha_Ped = int(input("Digite o número de Pediatras do turno da manhã: "))
+    turno_manha_Cir = int(input("Digite o número de Cirurgiões do turno da manhã: "))
+
+    print("\nConfirme os dados do turno da manhã:")
+    print("Clínicos Gerais:", turno_manha_CD)
+    print("Pediatras:", turno_manha_Ped)
+    print("Cirurgiões:", turno_manha_Cir)
+
+    button = input("Digite 's' para confirmar ou 'n' para corrigir: ")
+
+while maximo_med < (turno_manha_CD + turno_manha_Ped + turno_manha_Cir):
+    print("A quantidade de médicos do turno da manhã excede o máximo permitido. Por favor, insira novamente os dados.")
+
     turno_manha_CD = int(input("Digite o número de Clínicos Gerais do turno da manhã: "))
     turno_manha_Ped = int(input("Digite o número de Pediatras do turno da manhã: "))
     turno_manha_Cir = int(input("Digite o número de Cirurgiões do turno da manhã: "))
@@ -53,6 +67,20 @@ while button.lower() == 'n':
 
     button = input("Digite 's' para confirmar ou 'n' para corrigir: ")
 
+while maximo_med < (turno_tarde_CD + turno_tarde_Ped + turno_tarde_Cir):
+    print("A quantidade de médicos do turno da tarde excede o máximo permitido. Por favor, insira novamente os dados.")
+
+    turno_tarde_CD = int(input("Digite o número de Clínicos Gerais do turno da tarde: "))
+    turno_tarde_Ped = int(input("Digite o número de Pediatras do turno da tarde: "))
+    turno_tarde_Cir = int(input("Digite o número de Cirurgiões do turno da tarde: "))
+
+    print("\nConfirme os dados do turno da tarde:")
+    print("Clínicos Gerais:", turno_tarde_CD)
+    print("Pediatras:", turno_tarde_Ped)
+    print("Cirurgiões:", turno_tarde_Cir)
+
+    button = input("Digite 's' para confirmar ou 'n' para corrigir: ")
+    
 print("Dados do turno da tarde confirmados.")
 
 
@@ -70,6 +98,20 @@ print("Cirurgiões:", turno_noite_Cir)
 button = input("Digite 's' para confirmar ou 'n' para corrigir: ")
 
 while button.lower() == 'n':
+    turno_noite_CD = int(input("Digite o número de Clínicos Gerais do turno da noite: "))
+    turno_noite_Ped = int(input("Digite o número de Pediatras do turno da noite: "))
+    turno_noite_Cir = int(input("Digite o número de Cirurgiões do turno da noite: "))
+
+    print("\nConfirme os dados do turno da noite:")
+    print("Clínicos Gerais:", turno_noite_CD)
+    print("Pediatras:", turno_noite_Ped)
+    print("Cirurgiões:", turno_noite_Cir)
+
+    button = input("Digite 's' para confirmar ou 'n' para corrigir: ")
+
+while maximo_med < (turno_noite_CD + turno_noite_Ped + turno_noite_Cir):
+    print("A quantidade de médicos do turno da noite excede o máximo permitido. Por favor, insira novamente os dados.")
+
     turno_noite_CD = int(input("Digite o número de Clínicos Gerais do turno da noite: "))
     turno_noite_Ped = int(input("Digite o número de Pediatras do turno da noite: "))
     turno_noite_Cir = int(input("Digite o número de Cirurgiões do turno da noite: "))
