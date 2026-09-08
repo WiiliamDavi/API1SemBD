@@ -130,82 +130,87 @@ print("Dados do turno da noite confirmados.")
 
 
 AGORA EM VISUALG 
-NÃO está completo, precisa da mensagem de erro caso o número de médicos passe do limite 
+NÃO está completo, vou colocar as informações dos outros turnos ainda.
 
 Algoritmo "Escala_Medicos"
 
 Var
-   turno_manha_CD, turno_manha_Ped, turno_manha_Cir : real
-   result_turno_manha_CD, result_turno_manha_Ped, result_turno_manha_Cir : real
-   turno_tarde_CD, turno_tarde_Ped, turno_tarde_Cir : real
-   turno_noite_CD, turno_noite_Ped, turno_noite_Cir : real
+   turno_manha_CG, turno_manha_Ped, turno_manha_Cir : real
+   result_turno_manha_CG, result_turno_manha_Ped, result_turno_manha_Cir : real
    button : caractere
 
 Inicio
-   turno_manha_CD <- -1
-   Enquanto (button <> "s") E (button <> "S")Fa�a
-      escreval()
-      Enquanto (turno_manha_CD < 0) OU (turno_manha_CD>150) OU (result_turno_manha_CD>0)Fa�a
-         escreval("Digite o n�mero de Cl�nicos Gerais do turno da manh�: ")
-         leia(turno_manha_CD)
-         result_turno_manha_CD <- turno_manha_CD - int(turno_manha_CD)
-         Se(turno_manha_CD<0)Ent�o
-            escreval()
-            escreval("N�mero inv�lido! Quantidade n�o pode ser negativo")
+   turno_manha_CG <- -1
+   turno_manha_Ped <- -1
+   turno_manha_Cir <- -1
 
-         Sen�o
-            Se(turno_manha_CD>150)Ent�o
+   Enquanto (button <> "s") E (button <> "S") Faça
+      Escreval()
+      Enquanto (turno_manha_CG < 0) OU (turno_manha_CG>150) OU (result_turno_manha_CG>0) Faça
+         Escreval("Digite o número de Clínicos Gerais do turno da manhã: ")
+         Leia(turno_manha_CG)
+         result_turno_manha_CG <- turno_manha_CG - int(turno_manha_CG)
+         Se(turno_manha_CG<0)Então
+            Escreval()
+            escreval("Número inválido! Quantidade não pode ser negativo")
+            Escreval()
+         Senão
+            Se (turno_manha_CG>150) Então
                Escreval()
-               Escreval(" N�mero inv�lido! Quantidade de m�dicos maior que max")
+               Escreval(" Número inválido! Quantidade de medicos maior que max")
                Escreval()
-            Sen�o
-               Se(result_turno_manha_CD>0)Ent�o
+            Senão
+               Se(result_turno_manha_CG>0)Então
                   Escreval()
-                  Escreval(" N�mero inv�lido! Quantidade de m�dicos n�o pode ser decimal")
+                  Escreval(" Número inválido! Quantidade de médicos não pode ser decimal")
                   Escreval()
                Fimse
             Fimse
          Fimse
       Fimenquanto
+      Escreval()
+      Escreval("Digite o número de Pediatras do turno da manhã: ")
+      Leia(turno_manha_Ped)
+      Escreval()
+      Escreval("Digite o número de Cirurgiões do turno da manhã: ")
+      Leia(turno_manha_Cir)
 
-      escreval("Digite o n�mero de Pediatras do turno da manh�: ")
-      leia(turno_manha_Ped)
+      Escreval()
+      Escreval("Confirme os dados do turno da manhã:")
+      Escreval("Clínicos Gerais: ", turno_manha_CG)
+      Escreval("Pediatras: ", turno_manha_Ped)
+      Escreval("Cirurgiões: ", turno_manha_Cir)
+      Escreval()
 
-      escreval("Digite o n�mero de Cirurgi�es do turno da manh�: ")
-      leia(turno_manha_Cir)
+      Escreval("Digite 's' para confirmar ou 'n' para corrigir:")
+      Leia(button)
+      Escreval()
+      Escreval()
+      Se (button = "n") OU (button = "N") Então
+         turno_manha_CG <- -1
+         turno_manha_Ped <- -1
+         turno_manha_Cir <- -1
 
-      escreval()
-      escreval("Confirme os dados do turno da manh�:")
-      escreval("Cl�nicos Gerais: ", turno_manha_CD)
-      escreval("Pediatras: ", turno_manha_Ped)
-      escreval("Cirurgi�es: ", turno_manha_Cir)
-
-      escreval("Digite 's' para confirmar ou 'n' para corrigir:")
-      leia(button)
-      escreval()
-      escreval()
-      Se(button = "n") OU (button = "N") Ent�o
-         turno_manha_CD <- -1
          Escreval()
          Escreval("Digite novamente os dados")
          Escreval()
-      Sen�o
-         Se (button <> "s") E (button <> "S") Ent�o
-            turno_manha_CD <- -1
+      Senão
+         Se (button <> "s") E (button <> "S") Então
+            turno_manha_CG <- -1
+            turno_manha_Ped <- -1
+            turno_manha_Cir <- -1
             Escreval()
-            Escreval("Op��o inv�lida! Digite novamente os dados")
+            Escreval("Opção inválida! Digite novamente os dados")
             Escreval()
          Fimse
       Fimse
 
    Fimenquanto
-   escreval("Dados da manh� confirmados.")
+   escreval("Dados da manhã confirmados.")
 
 Fimalgoritmo
 
 
 
-   escreval("Dados da noite confirmados.")
-
-Fimalgoritmo
+ 
 
