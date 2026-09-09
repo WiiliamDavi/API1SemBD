@@ -171,41 +171,55 @@ Inicio
       Escreval()
       Escreval("Digite o número de Pediatras do turno da manhã: ")
       Leia(turno_manha_Ped)
+      Enquanto (turno_manha_Ped < 0) OU (turno_manha_Ped>150) OU (result_turno_manha_Ped>0) Faça
+         Escreval("Digite o número de Pediatras do turno da manhã: ")
+         Leia(turno_manha_Ped)
+         result_turno_manha_Ped <- turno_manha_Ped - int(turno_manha_Ped)
+         Se(turno_manha_Ped<0)Então
+            Escreval()
+            escreval("Número inválido! Quantidade não pode ser negativo")
+            Escreval()
+         Senão
+            Se (turno_manha_Ped>150) Então
+               Escreval()
+               Escreval(" Número inválido! Quantidade de medicos maior que max")
+               Escreval()
+            Senão
+               Se(result_turno_manha_Ped>0)Então
+                  Escreval()
+                  Escreval(" Número inválido! Quantidade de médicos não pode ser decimal")
+                  Escreval()
+               Fimse
+            Fimse
+         Fimse
+      Fimenquanto
+      
       Escreval()
       Escreval("Digite o número de Cirurgiões do turno da manhã: ")
       Leia(turno_manha_Cir)
-
-      Escreval()
-      Escreval("Confirme os dados do turno da manhã:")
-      Escreval("Clínicos Gerais: ", turno_manha_CG)
-      Escreval("Pediatras: ", turno_manha_Ped)
-      Escreval("Cirurgiões: ", turno_manha_Cir)
-      Escreval()
-
-      Escreval("Digite 's' para confirmar ou 'n' para corrigir:")
-      Leia(button)
-      Escreval()
-      Escreval()
-      Se (button = "n") OU (button = "N") Então
-         turno_manha_CG <- -1
-         turno_manha_Ped <- -1
-         turno_manha_Cir <- -1
-
-         Escreval()
-         Escreval("Digite novamente os dados")
-         Escreval()
-      Senão
-         Se (button <> "s") E (button <> "S") Então
-            turno_manha_CG <- -1
-            turno_manha_Ped <- -1
-            turno_manha_Cir <- -1
+      Enquanto (turno_manha_Cir < 0) OU (turno_manha_Cir>150) OU (result_turno_manha_Cir>0) Faça
+         Escreval("Digite o número de Pediatras do turno da manhã: ")
+         Leia(turno_manha_Cir)
+         result_turno_manha_Cir <- turno_manha_Cir - int(turno_manha_Cir)
+         Se(turno_manha_Ped<0)Então
             Escreval()
-            Escreval("Opção inválida! Digite novamente os dados")
+            escreval("Número inválido! Quantidade não pode ser negativo")
             Escreval()
+         Senão
+            Se (turno_manha_Cir>150) Então
+               Escreval()
+               Escreval(" Número inválido! Quantidade de medicos maior que max")
+               Escreval()
+            Senão
+               Se(result_turno_manha_Cir>0)Então
+                  Escreval()
+                  Escreval(" Número inválido! Quantidade de médicos não pode ser decimal")
+                  Escreval()
+               Fimse
+            Fimse
          Fimse
-      Fimse
-
-   Fimenquanto
+      Fimenquanto
+      
    escreval("Dados da manhã confirmados.")
 
 Fimalgoritmo
